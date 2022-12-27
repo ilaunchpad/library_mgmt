@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'library.apps.LibraryConfig',
+    'accounts.apps.AccountsConfig',
+    'landing.apps.LandingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,6 +92,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+AUTH_USER_MODEL ="accounts.User"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -128,3 +131,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SESSION_COOKIE_SECURE = False
+##LOGIN_REDIRECT_URL = "templates/home"
+##LOGOUT_REDIRECT_URL = "home"
