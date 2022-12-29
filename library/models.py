@@ -16,7 +16,7 @@ class Book(models.Model):
     def __str__(self):
       return self.name
 
-
+''''
 class Checkout(models.Model):
     userid = models.ForeignKey('Member', models.DO_NOTHING, db_column='userid', blank=True, null=True)
     bookid = models.ForeignKey(Book, models.DO_NOTHING, db_column='bookid', blank=True, null=True)
@@ -31,4 +31,4 @@ class Member(models.Model):
 
     def __str__(self):
       return self.name
-
+'''

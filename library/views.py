@@ -37,15 +37,11 @@ def books(request):
   if request.method=='GET':
     books = Book.objects.all()
     books_serialized = BookSerializer(books, many=True)
-    print('books', books_serialized)
-    template = loader.get_template('library/index.html')
     context = {
         'latest_book_list': books_serialized,
         }
     print('context ', context)
     return render(request, 'library/books.html',context)
-    #return Response(template.render(books, request), safe=False)
-    #return HttpResponse(books_serialized)
 
 class BookView(generic.ListView):
   template_name = 'library/booklist.html'

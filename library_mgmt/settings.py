@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'library.apps.LibraryConfig',
     'accounts.apps.AccountsConfig',
     'landing.apps.LandingConfig',
+    'checkout.apps.CheckoutConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

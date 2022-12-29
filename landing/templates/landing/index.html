@@ -3,9 +3,9 @@
   <br>
 	 <div class="container">
 		 {% if user.is_authenticated%}
-		 <h5> Welcome {{user.username}}. This is your home page </h5>
+		 <h5> Welcome {{user.username}} </h5>
 		 {%else %}
-		 <h5> Welcome to the library </h5>
+		 <h5> Welcome to the library. Please login to checkout books </h5>
 
 		 {% endif %}
 
